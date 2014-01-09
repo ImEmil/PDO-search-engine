@@ -1,7 +1,7 @@
 <?php
 class Search{
- 
-	private $s;
+  
+  private $s;
 
   public function __construct($database) {
 	$this->s = $database;
