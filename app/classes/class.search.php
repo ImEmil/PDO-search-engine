@@ -19,8 +19,8 @@ class Search{
 	}
     }
   
-  public function form($form) {
-   	return (isset($_POST["{$form}"]) ? true : false);                                                
+  public function get($form) {
+   	return (isset($_GET["{$form}"]) ? true : false);                                                
     }
 
   public function __destruct() {
