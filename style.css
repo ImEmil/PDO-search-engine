@@ -50,6 +50,12 @@ main > section > aside {
   box-shadow    : rgba(0,0,0,0.43) 0 -2px 1px inset;
 }
 
+[found]:after {
+  float        : right;
+  content      : attr(found);
+  font-size    : 11px;
+}
+
 main > section > article {
   display       : inline-block;
   padding       : 8px;
