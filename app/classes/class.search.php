@@ -9,14 +9,8 @@ class Search{
 	
   public function search($keyword) {
 	$exc = $this->s->prepare("SELECT * FROM  `users` WHERE `username` LIKE ?");
-	$exc->execute( ['%' . $keyword . '%']);         // Executes an array |>  <> Require PHP >= 5.4.0 
-	
-	if(intval($exc->fetchColumn()) === 0) { // Check if we found something
-          return $exc->fetch(PDO::FETCH_OBJ);
-	}
-	else {
-		return false;
-	}
+	$exc->execute( ['%' . $keyword . '%']);         // Executes an array |>  <> Require PHP >= 5.4.0
+        return $exc->fetchAll();
     }
   
   public function get($form) {
