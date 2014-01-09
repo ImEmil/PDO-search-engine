@@ -18,12 +18,17 @@
 
   <main>
     <section>
-
+      
+      <form action="" method="GET">
+        <input type="text"   name="keyword" placeholder="Search here" required>
+        <input type="submit" name="key"     value="Search">
+      </form>
+      
     <?php
       $keyword = null;
       $count = 0;
       if($s->get("key")) {
-      $keyword = clean($_GET['keyword']);
+      $keyword = clean($_GET['key']);
       $found   = $cms->search($keyword);
       $count   = count($found);
     }
