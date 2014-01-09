@@ -64,12 +64,12 @@ main > section > article {
 }
 
 form > input {
-  display       :inline-block;
-  margin-bottom :5px;
-  background    :#fff;
-  border        :1px solid #666;
-  padding       :8px;
-  color         :#999;
+  display       : inline-block;
+  margin-bottom : 5px;
+  background    : #fff;
+  border        : 1px solid #666;
+  padding       : 8px;
+  color         : #999;
 }
 
 footer {
