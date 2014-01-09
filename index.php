@@ -20,8 +20,8 @@
     <section>
       
       <form action="" method="GET">
-        <input type="text"   name="keyword" placeholder="Search here" required>
-        <input type="submit" name="key"     value="Search">
+        <input type="text"   name="key" placeholder="Search here" required>
+        <input type="submit" value="Search">
       </form>
       
     <?php
@@ -29,7 +29,7 @@
       $count = 0;
       if($s->get("key")) {
       $keyword = clean($_GET['key']);
-      $found   = $cms->search($keyword);
+      $found   = $s->search($keyword);
       $count   = count($found);
     }
     ?>
@@ -40,7 +40,7 @@
      if($s->get("key") && $count > 0) {
 
       foreach( $found as $row ) {
-      echo "<article> #{$row->id}  &raquo; {$row->username} </article>";
+      echo "<article> #{$row['id']}  &raquo; {$row['username']} </article>";
     }
   }
 ?>
