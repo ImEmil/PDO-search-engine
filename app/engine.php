@@ -13,7 +13,7 @@
 
 
   require('app/config.php');
-  require('classes/class.config.php');
+  require('classes/class.db.php');
   require('classes/class.search.php');
   
   $s        = new Search($s);
